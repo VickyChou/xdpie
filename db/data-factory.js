@@ -9,7 +9,7 @@ var user , charging;
 module.exports = {
     init: function () {
 
-        var sequelize = new Sequelize('xdpie-db', 'root', 'xdpiedb123', {
+        var sequelize = new Sequelize('xdpiedb', 'root', 'xdpiedb123', {
             host: 'localhost',
             dialect: 'mysql'
         });

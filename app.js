@@ -35,9 +35,9 @@ app.use('/home', index);
 app.use('/users', users);
 
 //重定向
-/*app.use(function (req, res, next) {
-    res.redirect('/views/index.html');
-});*/
+app.use(function (req, res, next) {
+    res.redirect('views/home/index.html#!/questionary');
+});
 
 
 module.exports = app;
