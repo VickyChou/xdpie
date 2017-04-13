@@ -1,0 +1,79 @@
+@blue: #71d1d9;
+@white: white;
+@tint-gray:#bfbfbf;
+@light-blue: #72dbe3;
+@pink:#E91E63;
+.right{
+  text-align: right;
+}
+.width60{
+  width: 5em;
+}
+.notice{
+  width: 100%;
+  height: 40em;
+  background: url("/public/images/timg.jpg") no-repeat;
+  .messages{
+    position: absolute;
+    z-index: 10;
+    left: 30em;
+    top:15em;
+    color: @white;
+    h1{
+      font-size: 5em;
+      margin-bottom: 1.5em;
+    }
+    p{
+      font-size: 2em;
+    }
+  }
+}
+
+.questionary{
+  .ques-title{
+    margin: 0 auto;
+    text-align: center;
+    h1{
+      color: @blue;
+      font-size: 4em;
+      i{
+        padding: 0 0.8em;
+      }
+    }
+    p{
+      font-size: 1.5em;
+      color: @tint-gray;
+      padding: 2em 0;
+    }
+  }
+  .ques-form{
+    background:@light-blue ;
+    color: @white;
+    font-size: 1.1em;
+    form{
+      margin: 0 auto;
+      width: 50%;
+      padding: 3em 0;
+      .row-space{
+        margin-bottom: 2em;
+      }
+      input{
+        display: inline-block;
+      }
+      textarea{
+        height: 10em;
+        resize: none;
+      }
+      md-radio-group{
+        md-radio-button{
+          display: inline-block;
+          margin-right: 2em;
+        }
+      }
+      .button-pink{
+        background-color: @pink;
+        color: @white;
+      }
+    }
+  }
+}

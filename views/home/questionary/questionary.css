@@ -1,0 +1,69 @@
+.right {
+  text-align: right;
+}
+.width60 {
+  width: 5em;
+}
+.notice {
+  width: 100%;
+  height: 40em;
+  background: url("/public/images/timg.jpg") no-repeat;
+}
+.notice .messages {
+  position: absolute;
+  z-index: 10;
+  left: 30em;
+  top: 15em;
+  color: white;
+}
+.notice .messages h1 {
+  font-size: 5em;
+  margin-bottom: 1.5em;
+}
+.notice .messages p {
+  font-size: 2em;
+}
+.questionary .ques-title {
+  margin: 0 auto;
+  text-align: center;
+}
+.questionary .ques-title h1 {
+  color: #71d1d9;
+  font-size: 4em;
+}
+.questionary .ques-title h1 i {
+  padding: 0 0.8em;
+}
+.questionary .ques-title p {
+  font-size: 1.5em;
+  color: #bfbfbf;
+  padding: 2em 0;
+}
+.questionary .ques-form {
+  background: #72dbe3;
+  color: white;
+  font-size: 1.1em;
+}
+.questionary .ques-form form {
+  margin: 0 auto;
+  width: 50%;
+  padding: 3em 0;
+}
+.questionary .ques-form form .row-space {
+  margin-bottom: 2em;
+}
+.questionary .ques-form form input {
+  display: inline-block;
+}
+.questionary .ques-form form textarea {
+  height: 10em;
+  resize: none;
+}
+.questionary .ques-form form md-radio-group md-radio-button {
+  display: inline-block;
+  margin-right: 2em;
+}
+.questionary .ques-form form .button-pink {
+  background-color: #E91E63;
+  color: white;
+}

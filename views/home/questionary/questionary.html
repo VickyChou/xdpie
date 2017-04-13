@@ -1,0 +1,91 @@
+<div class="notice">
+    <!--模态框开始-->
+    <div>
+        <script type="text/ng-template" id="confirmMsg">
+            <div class="modal-header">
+                <h3 class="modal-title" id="confirm-title">提示信息</h3>
+            </div>
+            <div class="modal-body" id="confirm-body">
+                <p>数据提交已成功，谢谢您的支持！</p>
+            </div>
+        </script>
+    </div>
+    <div>
+        <script type="text/ng-template" id="errorMsg">
+            <div class="modal-header">
+                <h3 class="modal-title" id="error-title">提示信息</h3>
+            </div>
+            <div class="modal-body" id="error-body">
+                <p>数据提交错误，请重新尝试，给您带来的不便，请见谅。</p>
+            </div>
+
+        </script>
+    </div>
+    <!--模态框结束-->
+    <div class="messages">
+        <h1>Hello，行动派!</h1>
+        <p>我们仍然在这里，并没有放弃，我们只是在生存和发展的过程中放慢了脚步，等待一个时机。</p>
+        <p>这是一个圈粉的时代，所以，我们需要你们的声音，你们的支持！</p>
+        <p>这是一次博弈，一次决策，决策在没有资金的情况下我们如何走下去。</p>
+    </div>
+</div>
+<div class="questionary" ng-controller="formController">
+    <div class="ques-title">
+        <h1>调&nbsp查<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>问&nbsp卷</h1>
+        <p ng-bind="description"></p>
+    </div>
+    <div class="ques-form container-fluid">
+        <form name="quesForm" form-submit>
+            <div class="row row-space">
+                <div class="col-xs-4 right">
+                    <span>是否支持收费:</span>
+                </div>
+                <div class="col-xs-6">
+                    <!--<input type="radio" name="iCheck" ng-model="iCheck" value="收费"  ng-click="enableCost()" checked>
+                    <span>支持</span>-->
+                    <md-radio-group ng-model="charging">
+                        <md-radio-button value="收费" ng-click="enableCost()">支持</md-radio-button>
+                        <md-radio-button value="不收费" ng-click="disableCost()">不支持</md-radio-button>
+                    </md-radio-group>
+                </div>
+                <!--<div class="col-xs-3">
+                    <input type="radio" name="iCheck" ng-model="iCheck" value="不收费" ng-click="disableCost()">
+                    <span>不支持</span>
+                </div>-->
+            </div>
+            <div class="row row-space">
+                <div class="col-xs-4 right">
+                    <span>您心目中的费用:</span>
+                </div>
+                <div class="col-xs-4">
+                    <input type="number" class="form-control width60" name="cost" ng-model="cost" ng-disabled="usable" ng-value="value" required>
+                    <span>元/年</span>
+                </div>
+            </div>
+            <div class="row row-space">
+                <div class="col-xs-4 right">
+                    <span>您觉得我们的功能还有什么改进的地方:</span>
+                </div>
+                <div class="col-xs-8">
+                    <textarea name="improvement" placeholder="请填写！" ng-model="improvement" class="form-control" ng-maxlength="500" ng-value="value"></textarea>
+                </div>
+            </div>
+            <div class="row row-space">
+                <div class="col-xs-4 right">
+                    <span>您的其他建议:</span>
+                </div>
+                <div class="col-xs-8">
+                    <textarea name="suggestion" ng-model="suggestion" class="form-control" ng-maxlength="500" placeholder="请填写！" ng-value="value"></textarea>
+                </div>
+            </div>
+            <div class="row row-space">
+                <div class="col-xs-4 right">
+                    <span></span>
+                </div>
+                <div class="col-xs-8">
+                    <input type="submit" class="button button-rounded button-pink" ng-click="formSubmit()" value="提交">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
