@@ -36,16 +36,7 @@ angular.module('xdpie')
             else {
                 quesFormSubmit.questionary(charge, cost, imp, sug).then(function (res) {
                     if (res.data.status == 'ok') {
-                        /*$uibModal.open({
-                         animation: true,
-                         keyboard: true,
-                         appendTo: '',
-                         ariaLabelledBy: 'confirm-title',
-                         ariaDescribedBy: 'confirm-body',
-                         templateUrl: 'confirmMsg',
-                         scope: $scope
-                         })*/
-                        alert('提交成功')
+                        window.location='/views/home/index.html#!/success';
                     }
                     else {
                         /*                        $uibModal.open({
